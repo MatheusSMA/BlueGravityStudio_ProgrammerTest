@@ -38,7 +38,7 @@ public class GeneralMovement : MonoBehaviour
     {
         _input = input;
     }
-    public void ChangeStatusIfCanMove(bool state)
+    public void ChangeMoveStatus(bool state)
     {
         _canMove = state;
     }

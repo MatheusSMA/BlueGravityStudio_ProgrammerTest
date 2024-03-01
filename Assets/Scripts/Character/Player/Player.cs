@@ -27,13 +27,14 @@ public class Player : MonoBehaviour
 
     private void InitiatePlayer()
     {
-        SetPlayerMoveStatus(true);
+        SetPlayerControl(true);
     }
 
-    private void SetPlayerMoveStatus(bool state)
+    private void SetPlayerControl(bool state)
     {
-        _playerInput.ChangeStatusToRecieveInput(state);
-        _playerMovent.ChangeStatusIfCanMove(state);
+        _playerInput.ChangeRecieveInputStatus(state);
+        _playerMovent.ChangeMoveStatus(state);
+        _playerInteractable.ChangeInteractionStatus(state);
     }
 
 }

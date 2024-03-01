@@ -24,7 +24,7 @@ public class PlayerInput : MonoBehaviour
     /// Tells whether or not ir can recieve input
     /// </summary>
     /// <param name="state"></param>
-    public void ChangeStatusToRecieveInput(bool state)
+    public void ChangeRecieveInputStatus(bool state)
     {
         _canInput = state;
     }

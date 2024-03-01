@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    [SerializeField] private string _walkingAnimKey;
     private Animator _animator;
 
     private void Start()

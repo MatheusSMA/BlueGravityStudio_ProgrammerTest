@@ -11,6 +11,6 @@ public class Shop : MonoBehaviour, IInteractable
 
     public void Interact(GameObject objectToInteract)
     {
-
+        Debug.Log("está perto da loja!!!");
     }
 }

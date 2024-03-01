@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerInput)), RequireComponent(typeof(PlayerMovement)), RequireComponent(typeof(PlayerAnimation)), RequireComponent(typeof(PlayerInteractable))]
 public class Player : MonoBehaviour
 {
     public static Player Instance;

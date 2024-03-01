@@ -10,12 +10,18 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerAnimation _playerAnimation;
     [SerializeField] private PlayerInteractable _playerInteractable;
     [SerializeField] private PlayerUI _playerUI;
+    [SerializeField] private PlayerEquipament _playerEquipament;
+    [SerializeField] private InventoryBase _playerInventory;
+    [SerializeField] private PlayerSO _playerSO;
 
     public PlayerInput PlayerInput { get => _playerInput; }
     public PlayerMovement PlayerMovent { get => _playerMovent; }
     public PlayerAnimation PlayerAnimation { get => _playerAnimation; }
     public PlayerInteractable PlayerInteractable { get => _playerInteractable; }
     public PlayerUI PlayerUI { get => _playerUI; }
+    public InventoryBase PlayerInventory { get => _playerInventory; set => _playerInventory = value; }
+    public PlayerEquipament PlayerEquipament { get => _playerEquipament; set => _playerEquipament = value; }
+    public PlayerSO PlayerSO { get => _playerSO; set => _playerSO = value; }
 
     private void Awake()
     {

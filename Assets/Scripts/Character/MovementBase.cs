@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class GeneralMovement : MonoBehaviour
+public class MovementBase : MonoBehaviour
 {
     [SerializeField] protected float _currentSpeed;
     protected Rigidbody2D _rb;

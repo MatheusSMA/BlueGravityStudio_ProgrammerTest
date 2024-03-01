@@ -7,10 +7,12 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private PlayerMovement _playerMovent;
     [SerializeField] private PlayerAnimation _playerAnimation;
+    [SerializeField] private PlayerInteractable _playerInteractable;
 
     public PlayerInput PlayerInput { get => _playerInput; }
     public PlayerMovement PlayerMovent { get => _playerMovent; }
-    public PlayerAnimation PlayerAnimation { get => _playerAnimation; set => _playerAnimation = value; }
+    public PlayerAnimation PlayerAnimation { get => _playerAnimation; }
+    public PlayerInteractable PlayerInteractable { get => _playerInteractable; }
 
     private void Awake()
     {

@@ -14,6 +14,6 @@ public class PlayerAnimation : MonoBehaviour
 
     public void SetWalkAnim(Vector2 input)
     {
-        _animator.SetFloat(PlayerConfig._WALKING_ANIMATION_KEY, input.magnitude);
+        _animator.SetFloat(PlayerConfig.WALKING_ANIMATION_KEY, input.magnitude);
     }
 }

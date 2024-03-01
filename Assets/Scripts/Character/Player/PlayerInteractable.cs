@@ -32,7 +32,7 @@ public class PlayerInteractable : MonoBehaviour
             if (_interactableClosestObject != null)
             {
                 _interactableClosestObject = null;
-                //TODO: Desligar UI de interação/ação
+                Player.Instance.PlayerUI.TurnInteractionButtonOFF();
             }
 
             return;
@@ -43,6 +43,7 @@ public class PlayerInteractable : MonoBehaviour
             if (collider.TryGetComponent<IInteractable>(out IInteractable interactable))
             {
                 _interactableClosestObject = interactable;
+                Player.Instance.PlayerUI.PositionInteractButton(_interactableClosestObject.gameObject.transform);
             }
         }
     }

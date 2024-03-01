@@ -1,29 +1,36 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryBase : MonoBehaviour
 {
+    [SerializeField] private MoneyBase _moneyBase;
+    [SerializeField] private List<ItemSO> _itens = new List<ItemSO>();
     private int _maxInventorySlot;
-    private List<ItemSO> _itensSO = new List<ItemSO>();
 
-    private void InitializeInventory(List<ItemSO> itens, int maxSlot)
+    public MoneyBase MoneyBase { get => _moneyBase; }
+    public List<ItemSO> Itens { get => _itens; }
+    public int MaxInventorySlot { get => _maxInventorySlot; }
+    public event Action OnItemChange;
+
+    private void InitializeInventory(int maxSlot, int initialMoney, List<ItemSO> itens = null)
     {
         _maxInventorySlot = maxSlot;
+        _moneyBase.SetStartMoney(initialMoney);
 
-        if (_itensSO != null)
-        {
+        if (_itens != null)
             foreach (ItemSO item in itens)
-            {
-                AddItens();
-            }
+                AddItens(item);
+    }
+    public void AddItens(ItemSO item)
+    {
+        if (_itens.Count > _maxInventorySlot)
+        {
+            _itens.Add(item);
         }
     }
-    public void AddItens()
+    public void RemoveItens(ItemSO item)
     {
-
-    }
-    public void RemoveItens()
-    {
-
+        _itens.Remove(item);
     }
 }

@@ -38,6 +38,11 @@ public class GeneralMovement : MonoBehaviour
     {
         _input = input;
     }
+
+    /// <summary>
+    /// Tells whether or not ir can move
+    /// </summary>
+    /// <param name="state"></param>
     public void ChangeMoveStatus(bool state)
     {
         _canMove = state;

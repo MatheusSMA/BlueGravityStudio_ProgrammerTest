@@ -7,8 +7,7 @@ public class PlayerUI : MonoBehaviour
 
     public void PositionInteractButton(Transform positionObject)
     {
-        if (!_interactionButton.gameObject.activeInHierarchy)
-            TurnInteractionButtonON();
+        if (!_interactionButton.gameObject.activeInHierarchy) TurnInteractionButtonON();
 
         _interactionButton.SetPosition(positionObject);
     }

@@ -14,8 +14,7 @@ public class PlayerInteractable : MonoBehaviour
 
     private void Update()
     {
-        if (_canInteract)
-            CheckNearbyInteractables();
+        if (_canInteract) CheckNearbyInteractables();
     }
 
     public void InteractWithObject()
@@ -48,6 +47,10 @@ public class PlayerInteractable : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Tells whether or not ir can interact
+    /// </summary>
+    /// <param name="state"></param>
     public void ChangeInteractionStatus(bool state)
     {
         _canInteract = state;

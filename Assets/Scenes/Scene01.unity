@@ -335,6 +335,24 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1349510089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050254623023727368, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
+  m_PrefabInstance: {fileID: 7730571925987419493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1349510095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349510089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0a9ca5169e9804a971376d366dc66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkingAnimKey: 
 --- !u!1 &1767149804
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +406,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 423394471749890532, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
+      propertyPath: _currentSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1290918281919182005, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3317222
@@ -436,6 +458,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681699626280018780, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
+      propertyPath: _playerAnimation
+      value: 
+      objectReference: {fileID: 1349510095}
     - target: {fileID: 5743240201716882144, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -443,7 +469,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2050254623023727368, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1349510095}
   m_SourcePrefab: {fileID: 100100000, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

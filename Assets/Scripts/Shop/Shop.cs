@@ -38,7 +38,7 @@ public class Shop : MonoBehaviour, IInteractable
 
         player.TryGetComponent<InventoryBase>(out InventoryBase _customerInventory);
         _costumerUi.SetInventory(_customerInventory);
-        _costumerUi.SetOther(_shopInventory);
+        _costumerUi.SetOther(_shopInventory);        
 
         _shopUi.SetOther(_customerInventory);
         _shopUiParent.SetActive(true);

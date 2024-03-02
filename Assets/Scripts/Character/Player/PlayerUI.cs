@@ -42,7 +42,10 @@ public class PlayerUI : MonoBehaviour
     public void TurnInventory(bool open)
     {
         if (open)
-            if (!UiManager.Instance.InventoryIsOpen) UiManager.Instance.PlayerInventoryOpen();
+            if (!UiManager.Instance.InventoryIsOpen)
+            {
+                UiManager.Instance.PlayerInventoryOpen();                
+            }
             else
                 UiManager.Instance.PlayerInventoryClose();
     }

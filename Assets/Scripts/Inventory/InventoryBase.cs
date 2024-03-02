@@ -13,6 +13,10 @@ public class InventoryBase : MonoBehaviour
     public int MaxInventorySlot { get => _maxInventorySlot; }
     public event Action OnItemChange;
 
+    public void ItemChanged()
+    {
+        OnItemChange?.Invoke();
+    }
     public void InitializeInventory(int maxSlot, int initialMoney, List<ItemSO> itens = null)
     {
         _maxInventorySlot = maxSlot;
@@ -22,12 +26,16 @@ public class InventoryBase : MonoBehaviour
             foreach (ItemSO item in itens)
                 AddItens(item);
     }
-    public void AddItens(ItemSO item)
+    public bool AddItens(ItemSO item)
     {
         if (_itens.Count < _maxInventorySlot)
         {
             _itens.Add(item);
+            ItemChanged();
+            return true;
         }
+        
+        return false;
     }
     public void RemoveItens(ItemSO item)
     {

@@ -24,7 +24,7 @@ public class InventoryBase : MonoBehaviour
     }
     public void AddItens(ItemSO item)
     {
-        if (_itens.Count > _maxInventorySlot)
+        if (_itens.Count < _maxInventorySlot)
         {
             _itens.Add(item);
         }

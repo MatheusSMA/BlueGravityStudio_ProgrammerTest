@@ -645,8 +645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da98120dc34c2e64dae89accfee0b33b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shopInfo: {fileID: 0}
-  _shopInventory: {fileID: 0}
+  _shopInfo: {fileID: 11400000, guid: 3627c2fe730ed0e448cf41545609f496, type: 2}
+  _shopInventory: {fileID: 3584738497105110127}
   _shopUiParent: {fileID: 1850902517050784108}
   _shopUi: {fileID: 6097841689570120819}
   _shopNameTxt: {fileID: 0}

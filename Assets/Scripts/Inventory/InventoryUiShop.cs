@@ -40,7 +40,7 @@ public class InventoryUiShop : InventoryUIBase
         _otherInventory.MoneyBase.RemoveMoney(itemSold.price);
         _inventory.MoneyBase.AddMoney(itemSold.price);
         _inventory.RemoveItens(itemSold);
-        // _otherInventory.OnItemChange();
+        //  _otherInventory.OnItemChange();
         ItemWasSold();
 
     }

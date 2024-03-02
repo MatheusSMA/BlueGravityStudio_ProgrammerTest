@@ -17,7 +17,7 @@ public class PlayerInteractable : MonoBehaviour
 
     public void InteractWithObject()
     {
-        _interactableClosestObject?.Interact(gameObject);
+        _interactableClosestObject?.Interact(this.gameObject);
     }
 
     private void CheckNearbyInteractables()
@@ -31,7 +31,7 @@ public class PlayerInteractable : MonoBehaviour
                 _interactableClosestObject = null;
                 Player.Instance.PlayerUI.TurnInteractionButtonOFF();
             }
-            
+
             return;
         }
 

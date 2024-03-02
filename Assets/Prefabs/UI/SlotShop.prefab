@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7125906660667784476, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_Name
+      value: PriceTXT
+      objectReference: {fileID: 0}
     - target: {fileID: 8952084723718988949, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
       propertyPath: m_Name
       value: SlotShop
@@ -95,5 +99,51 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8952084723718988949, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5401151910837114361}
   m_SourcePrefab: {fileID: 100100000, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+--- !u!114 &4116721268353413336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2226804284276120791, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+  m_PrefabInstance: {fileID: 2866183393842342927}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6627762892238227610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8952084723718988949, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+  m_PrefabInstance: {fileID: 2866183393842342927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5401151910837114361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627762892238227610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cc45274cb61f746935f19731c5340e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _icon: {fileID: 9193528754890354284}
+  _priceTagUi: {fileID: 4116721268353413336}
+  _enoughMoneyColor: {r: 0.31565195, g: 0.9559748, b: 0.3503246, a: 1}
+  _notEnoughMoneyColor: {r: 0.9685534, g: 0.28934765, b: 0.28934765, a: 1}
+--- !u!114 &9193528754890354284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6364504559369093731, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+  m_PrefabInstance: {fileID: 2866183393842342927}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

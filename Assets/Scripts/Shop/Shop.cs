@@ -27,13 +27,14 @@ public class Shop : MonoBehaviour, IInteractable
         else
             isAvailableToInteract = false;
     }
-    public void Interact(GameObject objectToInteract)
+    public void Interact(GameObject player)
     {
         if (UiManager.Instance.InventoryIsOpen) return;
 
-        objectToInteract.TryGetComponent<InventoryBase>(out InventoryBase _customerInventory);
-        _shopUi.SetInventory(_customerInventory);
+        player.TryGetComponent<InventoryBase>(out InventoryBase _customerInventory);
+        _shopUi.SetInventory(_shopInventory);
         _shopUi.SetOther(_shopInventory);
+
         _shopUi.SetOther(_customerInventory);
         _shopUiParent.SetActive(true);
         UiManager.Instance.ShopInventoryOpen();

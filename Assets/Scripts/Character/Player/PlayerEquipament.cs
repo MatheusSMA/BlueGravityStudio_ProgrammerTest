@@ -25,10 +25,10 @@ public class PlayerEquipament : MonoBehaviour
 
     public void InitializePlayerClothes()
     {
-        // SwitchClothes(Player.Instance.PlayerSO.headEquipament);
-        // SwitchClothes(Player.Instance.PlayerSO.chestEquipament);
-        // SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
-        // SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
+        SwitchClothes(Player.Instance.PlayerSO.headEquipament);
+        SwitchClothes(Player.Instance.PlayerSO.chestEquipament);
+        SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
+        SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
     }
 
     public void SwitchClothes(ItemSO item)

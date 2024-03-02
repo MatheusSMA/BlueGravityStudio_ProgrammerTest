@@ -3,12 +3,20 @@ using UnityEngine;
 
 public class UiManager : MonoBehaviour
 {
+    public static UiManager Instance;
     public event Action OnPlayerInventoryOpen;
     public event Action OnPlayerInventoryClose;
     public event Action OnShopInventoryOpen;
     public event Action OnShopInventoryClose;
-
     private bool _inventoryIsOpen;
+
+    public bool InventoryIsOpen { get => _inventoryIsOpen; }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public void PlayerInventoryOpen()
     {
         OnPlayerInventoryOpen?.Invoke();

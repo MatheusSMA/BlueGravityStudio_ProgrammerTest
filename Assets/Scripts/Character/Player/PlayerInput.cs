@@ -32,7 +32,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetKeyDown(PlayerConfig.INVENTORY_KEY))
         {
-
+            Player.Instance.PlayerUI.TurnInventory(true);
         }
     }
 

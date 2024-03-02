@@ -26,19 +26,14 @@ public class InventoryBase : MonoBehaviour
             foreach (ItemSO item in itens)
                 AddItens(item);
     }
-    public bool AddItens(ItemSO item)
+    public void AddItens(ItemSO item)
     {
-        if (_itens.Count < _maxInventorySlot)
-        {
-            _itens.Add(item);
-            ItemChanged();
-            return true;
-        }
-        
-        return false;
+        _itens.Add(item);
+        ItemChanged();
     }
     public void RemoveItens(ItemSO item)
     {
         _itens.Remove(item);
+        ItemChanged();
     }
 }

@@ -12,11 +12,8 @@ public class InventoryUIBase : MonoBehaviour
 
     [Header("Parameters")]
     [SerializeField] protected string _panelName;
-
     protected List<InventorySlotBase> _slots = new List<InventorySlotBase>();
-
     protected InventoryBase _inventory;
-
     public InventoryBase Inventory { get => _inventory; }
 
     private void Start()
@@ -26,10 +23,7 @@ public class InventoryUIBase : MonoBehaviour
 
     public void SetInventory(InventoryBase inventory)
     {
-        if (_inventory)
-        {
-            _inventory.OnItemChange -= UpdateSlots;
-        }
+        if (_inventory) _inventory.OnItemChange -= UpdateSlots;
 
         _inventory = inventory;
         _inventory.OnItemChange += UpdateSlots;

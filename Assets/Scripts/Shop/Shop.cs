@@ -6,6 +6,7 @@ public class Shop : MonoBehaviour, IInteractable
     [SerializeField] private ShopSO _shopInfo;
     [SerializeField] private InventoryBase _shopInventory;
     [SerializeField] private GameObject _shopUiParent;
+    [SerializeField] private InventoryUiShop _costumerUi;
     [SerializeField] private InventoryUiShop _shopUi;
     [SerializeField] private TextMeshProUGUI _shopNameTxt;
     public bool isAvailableToInteract { get; set; }
@@ -29,11 +30,15 @@ public class Shop : MonoBehaviour, IInteractable
     }
     public void Interact(GameObject player)
     {
-        if (UiManager.Instance.InventoryIsOpen) return;
+        if (UiManager.Instance.InventoryIsOpen)
+        {
+            CloseShopUI();
+            return;
+        }
 
         player.TryGetComponent<InventoryBase>(out InventoryBase _customerInventory);
-        _shopUi.SetInventory(_shopInventory);
-        _shopUi.SetOther(_shopInventory);
+        _costumerUi.SetInventory(_customerInventory);
+        _costumerUi.SetOther(_shopInventory);
 
         _shopUi.SetOther(_customerInventory);
         _shopUiParent.SetActive(true);

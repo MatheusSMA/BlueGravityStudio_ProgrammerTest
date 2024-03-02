@@ -63,8 +63,7 @@ public class InventorySlotShop : InventorySlotBase
 
     private void Sell()
     {
-        if (!CheckPriceDelegate(_item.price))
-            return;
+        if (!CheckPriceDelegate(_item.price)) return;
 
         ItemSO item = _item;
 

@@ -19,7 +19,7 @@ public class PlayerInteractable : MonoBehaviour
 
     public void InteractWithObject()
     {
-        _interactableClosestObject.Interact(gameObject);
+        _interactableClosestObject?.Interact(gameObject);
     }
 
     private void CheckNearbyInteractables()

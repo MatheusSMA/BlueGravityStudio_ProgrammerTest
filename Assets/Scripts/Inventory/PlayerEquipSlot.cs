@@ -23,8 +23,11 @@ public class PlayerEquipSlot : InventorySlotBase
             case BodyLocation.Chest:
                 Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.chestEquipament);
                 break;
-            case BodyLocation.Hands:
-                Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
+            case BodyLocation.LeftHand:
+                Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.lefthandEquipament);
+                break;
+            case BodyLocation.RightHand:
+                Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.righthandEquipament);
                 break;
             case BodyLocation.Legs:
                 Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.legsEquipament);

@@ -8,7 +8,8 @@ public class PlayerEquipUi : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerEquipSlot _headSlot;
     [SerializeField] private PlayerEquipSlot _bodySlot;
-    [SerializeField] private PlayerEquipSlot _handsSlot;
+    [SerializeField] private PlayerEquipSlot _leftHandSlot;
+    [SerializeField] private PlayerEquipSlot _righthandSlot;
     [SerializeField] private PlayerEquipSlot _legsSlot;
     [SerializeField] protected TextMeshProUGUI _panelNameTxt;
 
@@ -20,7 +21,8 @@ public class PlayerEquipUi : MonoBehaviour
         _panelNameTxt.text = _panelName;
         _bodySlot.SetPlayerEquipUI(this);
         _headSlot.SetPlayerEquipUI(this);
-        _handsSlot.SetPlayerEquipUI(this);
+        _leftHandSlot.SetPlayerEquipUI(this);
+        _righthandSlot.SetPlayerEquipUI(this);
         _legsSlot.SetPlayerEquipUI(this);
     }
 
@@ -37,9 +39,10 @@ public class PlayerEquipUi : MonoBehaviour
 
     private void UpdateEquipSlots()
     {
-        UpdateEquipSlotsAux(Player.Instance.PlayerEquipament.CurrentBodyClothes, _bodySlot);
+        UpdateEquipSlotsAux(Player.Instance.PlayerEquipament.CurrentChestClothes, _bodySlot);
         UpdateEquipSlotsAux(Player.Instance.PlayerEquipament.CurrentHeadClothes, _headSlot);
-        UpdateEquipSlotsAux(Player.Instance.PlayerEquipament.CurrentTorsoClothes, _handsSlot);
+        UpdateEquipSlotsAux(Player.Instance.PlayerEquipament.CurrentLeftHandClothes, _leftHandSlot);
+        UpdateEquipSlotsAux(Player.Instance.PlayerEquipament.CurrentRightHandItem, _righthandSlot);
         UpdateEquipSlotsAux(Player.Instance.PlayerEquipament.CurrentLegsClothes, _legsSlot);
 
     }

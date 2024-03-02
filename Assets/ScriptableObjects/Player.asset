@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39958490cc9bf144a869de2e10278082, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  money: 10
+  money: 12
   maxInventorySlot: 36
   startingItens: []
-  headEquipament: {fileID: 11400000, guid: 5524693c890515f4c9aedd06add26e1f, type: 2}
-  chestEquipament: {fileID: 11400000, guid: 5524693c890515f4c9aedd06add26e1f, type: 2}
-  handsEquipament: {fileID: 11400000, guid: 5524693c890515f4c9aedd06add26e1f, type: 2}
-  legsEquipament: {fileID: 11400000, guid: 5524693c890515f4c9aedd06add26e1f, type: 2}
+  headEquipament: {fileID: 0}
+  chestEquipament: {fileID: 0}
+  lefthandEquipament: {fileID: 0}
+  righthandEquipament: {fileID: 0}
+  legsEquipament: {fileID: 0}

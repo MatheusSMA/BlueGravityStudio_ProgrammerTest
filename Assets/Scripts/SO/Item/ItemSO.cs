@@ -14,5 +14,6 @@ public enum BodyLocation
     Head,
     Chest,
     Legs,
-    Hands
+    LeftHand,
+    RightHand
 }

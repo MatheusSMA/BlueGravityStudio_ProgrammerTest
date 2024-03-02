@@ -10,7 +10,8 @@ public class PlayerSO : ScriptableObject
 
     public ItemSO headEquipament;
     public ItemSO chestEquipament;
-    public ItemSO handsEquipament;
+    public ItemSO lefthandEquipament;
+    public ItemSO righthandEquipament;
     public ItemSO legsEquipament;
 
 

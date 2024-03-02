@@ -6,15 +6,14 @@ using UnityEngine;
 public class PlayerEquipament : MonoBehaviour
 {
 
-    private ItemSO _currentBodyClothes;
-    private ItemSO _currentHeadClothes;
-    private ItemSO _currentTorsoClothes;
-    private ItemSO _currentLegsClothes;
+    private ItemSO _currentHeadItem, _currentChestItem, _currentLeftHandItem, _currentRightHandItem, _currentLegsItem;
+    [SerializeField] private SpriteRenderer _currentHeadHolder, _currentChestHolder, _currentLeftHandHolder, _currentRightHandHolder, _currentLeftLegHolder, _currentRightLegHolder;
 
-    public ItemSO CurrentBodyClothes { get => _currentBodyClothes; }
-    public ItemSO CurrentHeadClothes { get => _currentHeadClothes; }
-    public ItemSO CurrentTorsoClothes { get => _currentTorsoClothes; }
-    public ItemSO CurrentLegsClothes { get => _currentLegsClothes; }
+    public ItemSO CurrentHeadClothes { get => _currentHeadItem; }
+    public ItemSO CurrentChestClothes { get => _currentChestItem; }
+    public ItemSO CurrentLeftHandClothes { get => _currentLeftHandItem; }
+    public ItemSO CurrentRightHandItem { get => _currentRightHandItem; }
+    public ItemSO CurrentLegsClothes { get => _currentLegsItem; }
 
     public event Action OnItemChange;
 
@@ -27,25 +26,35 @@ public class PlayerEquipament : MonoBehaviour
     {
         SwitchClothes(Player.Instance.PlayerSO.headEquipament);
         SwitchClothes(Player.Instance.PlayerSO.chestEquipament);
-        SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
-        SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
+        SwitchClothes(Player.Instance.PlayerSO.lefthandEquipament);
+        SwitchClothes(Player.Instance.PlayerSO.righthandEquipament);
+        SwitchClothes(Player.Instance.PlayerSO.legsEquipament);
     }
 
     public void SwitchClothes(ItemSO item)
     {
-        switch (item.itemBodyLocation)
+        switch (item?.itemBodyLocation)
         {
             case BodyLocation.Head:
-                ChangeClothesHelper(ref _currentHeadClothes, item, Player.Instance.PlayerSO.headEquipament);
+                ChangeClothesHelper(ref _currentHeadItem, item, Player.Instance.PlayerSO.headEquipament);
+                _currentHeadHolder.sprite = _currentHeadItem.icon;
                 break;
             case BodyLocation.Chest:
-                ChangeClothesHelper(ref _currentBodyClothes, item, Player.Instance.PlayerSO.chestEquipament);
+                ChangeClothesHelper(ref _currentChestItem, item, Player.Instance.PlayerSO.chestEquipament);
+                _currentChestHolder.sprite = _currentChestItem.icon;
                 break;
-            case BodyLocation.Hands:
-                ChangeClothesHelper(ref _currentTorsoClothes, item, Player.Instance.PlayerSO.handsEquipament);
+            case BodyLocation.LeftHand:
+                ChangeClothesHelper(ref _currentLeftHandItem, item, Player.Instance.PlayerSO.lefthandEquipament);
+                _currentLeftHandHolder.sprite = _currentLeftHandItem.icon;
+                break;
+            case BodyLocation.RightHand:
+                ChangeClothesHelper(ref _currentRightHandItem, item, Player.Instance.PlayerSO.righthandEquipament);
+                _currentRightHandHolder.sprite = _currentRightHandItem.icon;
                 break;
             case BodyLocation.Legs:
-                ChangeClothesHelper(ref _currentLegsClothes, item, Player.Instance.PlayerSO.legsEquipament);
+                ChangeClothesHelper(ref _currentLegsItem, item, Player.Instance.PlayerSO.legsEquipament);
+                _currentLeftLegHolder.sprite = _currentLegsItem.icon;
+                _currentRightLegHolder.sprite = _currentLegsItem.icon;
                 break;
         }
     }

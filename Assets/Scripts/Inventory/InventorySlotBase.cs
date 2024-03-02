@@ -7,7 +7,6 @@ public class InventorySlotBase : MonoBehaviour
 {
     [Header("Parameters")]
     [SerializeField] protected Image _icon;
-
     protected InventoryUIBase _inventoryUI;
     protected ItemSO _item;
 

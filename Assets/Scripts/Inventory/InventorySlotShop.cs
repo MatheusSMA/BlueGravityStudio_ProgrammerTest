@@ -1,20 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class InventorySlotShop : InventorySlotBase
 {
     [Header("References")]
-    [SerializeReference] private TextMeshProUGUI _priceTagUi; 
+    [SerializeReference] private TextMeshProUGUI _priceTagUi;
 
     [Header("Parameters")]
     [SerializeField] private Color _enoughMoneyColor;
     [SerializeField] private Color _notEnoughMoneyColor;
 
     private InventoryUiShop _uiShop;
-    
+
     public delegate bool CheckPrice(int price);
 
     public CheckPrice CheckPriceDelegate;
@@ -27,7 +24,7 @@ public class InventorySlotShop : InventorySlotBase
     public override void AddItem(ItemSO item)
     {
         base.AddItem(item);
-        
+
         CheckPriceDelegate = _uiShop.CheckPrice;
         UpdatePrice();
     }
@@ -44,7 +41,7 @@ public class InventorySlotShop : InventorySlotBase
     public void UpdatePrice()
     {
         if (CheckPriceDelegate == null) return;
-        
+
         _priceTagUi.enabled = true;
 
         _priceTagUi.text = $"${_item.price}";
@@ -59,7 +56,7 @@ public class InventorySlotShop : InventorySlotBase
 
     public override void Use()
     {
-        if(_item == null) return;
+        if (_item == null) return;
 
         Sell();
     }
@@ -68,9 +65,9 @@ public class InventorySlotShop : InventorySlotBase
     {
         if (!CheckPriceDelegate(_item.price))
             return;
-        
+
         ItemSO item = _item;
-        
+
         _uiShop.ItemSold(item);
     }
 }

@@ -8,6 +8,8 @@ public class PlayerEquipSlot : InventorySlotBase
 
     public override void Use()
     {
+        if (_item == null) return;
+
         RemoveEquipedItem(_item);
     }
 

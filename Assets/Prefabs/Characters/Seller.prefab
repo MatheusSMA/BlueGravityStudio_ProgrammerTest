@@ -510,6 +510,8 @@ GameObject:
   - component: {fileID: 3723735672289395271}
   - component: {fileID: 1910058452776458526}
   - component: {fileID: 8087846415436582912}
+  - component: {fileID: 3584738497105110127}
+  - component: {fileID: 2785818350553298496}
   m_Layer: 0
   m_Name: Seller
   m_TagString: Untagged
@@ -648,6 +650,35 @@ MonoBehaviour:
   _shopUiParent: {fileID: 1850902517050784108}
   _shopUi: {fileID: 6097841689570120819}
   _shopNameTxt: {fileID: 0}
+--- !u!114 &3584738497105110127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744765977085246897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce2522af2923cd44b18360541af9b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moneyBase: {fileID: 2785818350553298496}
+  _itens: []
+--- !u!114 &2785818350553298496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744765977085246897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944d35cdc3b355e4b9f6405722f76fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onMoneyChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &978415114151586290
 GameObject:
   m_ObjectHideFlags: 0

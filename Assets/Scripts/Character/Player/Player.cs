@@ -35,8 +35,10 @@ public class Player : MonoBehaviour
 
     private void InitiatePlayer()
     {
-        SetPlayerControl(true);
         _playerInventory.InitializeInventory(_playerSO.maxInventorySlot, _playerSO.money, _playerSO.startingItens);
+        _playerUI.InitializeInventoryUiPlayer(_playerInventory);
+
+        SetPlayerControl(true);
     }
 
     private void SetPlayerControl(bool state)

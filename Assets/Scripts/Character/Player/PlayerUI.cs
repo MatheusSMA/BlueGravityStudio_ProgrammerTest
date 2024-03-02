@@ -18,28 +18,19 @@ public class PlayerUI : MonoBehaviour
             UiManager.Instance.OnShopInventoryClose += ShopOff;
         }
     }
-
-    private void OnDisable()
+    public void InitializeInventoryUiPlayer(InventoryBase inventory)
     {
-        if (UiManager.Instance)
-        {
-            UiManager.Instance.OnPlayerInventoryOpen -= InventoryOn;
-            UiManager.Instance.OnShopInventoryOpen -= ShopOn;
-            UiManager.Instance.OnPlayerInventoryClose -= InventoryOff;
-            UiManager.Instance.OnShopInventoryClose -= ShopOff;
-        }
+        _inventoryUIPlayer.SetInventory(inventory);
     }
-
+    public void TurnInteractionButtonON()
+    {
+        _interactionButton.gameObject.SetActive(true);
+    }
     public void PositionInteractButton(Transform positionObject)
     {
         if (!_interactionButton.gameObject.activeInHierarchy) TurnInteractionButtonON();
 
         _interactionButton.SetPosition(positionObject);
-    }
-
-    public void TurnInteractionButtonON()
-    {
-        _interactionButton.gameObject.SetActive(true);
     }
 
     public void TurnInteractionButtonOFF()
@@ -78,5 +69,16 @@ public class PlayerUI : MonoBehaviour
     {
         // _interactionButton.gameObject.SetActive(true);
 
+    }
+
+    private void OnDisable()
+    {
+        if (UiManager.Instance)
+        {
+            UiManager.Instance.OnPlayerInventoryOpen -= InventoryOn;
+            UiManager.Instance.OnShopInventoryOpen -= ShopOn;
+            UiManager.Instance.OnPlayerInventoryClose -= InventoryOff;
+            UiManager.Instance.OnShopInventoryClose -= ShopOff;
+        }
     }
 }

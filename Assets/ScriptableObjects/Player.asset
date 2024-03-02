@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 10
   maxInventorySlot: 5
-  startingItens: []
+  startingItens:
+  - {fileID: 11400000, guid: 8091da9f6fee90a49b58b0441d14ba1d, type: 2}
   headEquipament: {fileID: 0}
   chestEquipament: {fileID: 0}
   handsEquipament: {fileID: 0}

@@ -31,7 +31,7 @@ public class PlayerInteractable : MonoBehaviour
                 _interactableClosestObject = null;
                 Player.Instance.PlayerUI.TurnInteractionButtonOFF();
             }
-
+            
             return;
         }
 

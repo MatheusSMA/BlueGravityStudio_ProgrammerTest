@@ -5,8 +5,8 @@ public class MoneyUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _moneyTXT;
 
-    public void UpdateMoneyText(int currentMoney)
+    public void UpdateMoneyText()
     {
-        _moneyTXT.text = $"${currentMoney.ToString()}";
+        _moneyTXT.text = $"${Player.Instance.PlayerMoney.CurrentMoney.ToString()}";
     }
 }

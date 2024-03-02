@@ -360,7 +360,8 @@ MonoBehaviour:
   _playerUI: {fileID: 8052182317000824214}
   _playerEquipament: {fileID: 4776012132104100901}
   _playerInventory: {fileID: 8368947742030162454}
-  _playerSO: {fileID: 0}
+  _playerMoney: {fileID: 1100745328740868831}
+  _playerSO: {fileID: 11400000, guid: 5d0a717ea21938e4f9bf6e4a442c85bd, type: 2}
 --- !u!114 &6212922636653656563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +430,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactionButtonParent: {fileID: 3267262080636777453}
   _interactionButton: {fileID: 8480082761730072517}
+  _inventoryUIPlayer: {fileID: 7235434191997468846}
+  _inventoryUI: {fileID: 3583832112494119799}
+  _moneyBase: {fileID: 1100745328740868831}
 --- !u!114 &1100745328740868831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,14 +448,14 @@ MonoBehaviour:
   _onMoneyChange:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 7985764422587699682}
+        m_TargetAssemblyTypeName: MoneyUI, Assembly-CSharp
+        m_MethodName: UpdateMoneyText
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2081,10 +2085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff70fc1ce5acb3844a835ab66929af41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 3681699626280018780}
-  _bodySlot: {fileID: 2692650429112803195}
   _headSlot: {fileID: 8034771993782417301}
-  _torsoSlot: {fileID: 2541799584836851120}
+  _bodySlot: {fileID: 2692650429112803195}
+  _handsSlot: {fileID: 2541799584836851120}
   _legsSlot: {fileID: 8833835058318730322}
   _panelNameTxt: {fileID: 7147686650539034481}
   _panelName: Equipped
@@ -2258,6 +2261,7 @@ GameObject:
   - component: {fileID: 6164012518159508022}
   - component: {fileID: 2578490211314652304}
   - component: {fileID: 897943406019216815}
+  - component: {fileID: 7235434191997468846}
   m_Layer: 0
   m_Name: BackpackUI
   m_TagString: Untagged
@@ -2324,6 +2328,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7235434191997468846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8149441839933814123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9dc61d346eacf448be23eb425ef0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slotsHolder: {fileID: 4543888260988689279}
+  _slotPrefab: {fileID: 8017707010115021553, guid: e48399c8fd13bd749b4b4aad5e4564d1, type: 3}
+  _panelNameTxt: {fileID: 6629420279970955970}
+  _panelName: My Itens
 --- !u!1 &8220723164904527107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,6 +2647,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bd5e936f3559dd48a89e959bf507a9f, type: 3}
+--- !u!114 &7985764422587699682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8972707209021566352, guid: 2bd5e936f3559dd48a89e959bf507a9f, type: 3}
+  m_PrefabInstance: {fileID: 1321340041600695410}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59ed643baa9d114c99de1b611cf9bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8404817673812339989 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7419045832971358567, guid: 2bd5e936f3559dd48a89e959bf507a9f, type: 3}

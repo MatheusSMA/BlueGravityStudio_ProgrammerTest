@@ -23,12 +23,12 @@ public class PlayerEquipament : MonoBehaviour
         OnItemChange?.Invoke();
     }
 
-    public void InitPlayerClothes()
+    public void InitializePlayerClothes()
     {
-        SwitchClothes(Player.Instance.PlayerSO.headEquipament);
-        SwitchClothes(Player.Instance.PlayerSO.chestEquipament);
-        SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
-        SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
+        // SwitchClothes(Player.Instance.PlayerSO.headEquipament);
+        // SwitchClothes(Player.Instance.PlayerSO.chestEquipament);
+        // SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
+        // SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
     }
 
     public void SwitchClothes(ItemSO item)
@@ -36,26 +36,23 @@ public class PlayerEquipament : MonoBehaviour
         switch (item.itemBodyLocation)
         {
             case BodyLocation.Head:
-                ChangeClothesAux(ref _currentBodyClothes, item, Player.Instance.PlayerSO.headEquipament);
+                ChangeClothesHelper(ref _currentBodyClothes, item, Player.Instance.PlayerSO.headEquipament);
                 break;
             case BodyLocation.Chest:
-                ChangeClothesAux(ref _currentHeadClothes, item, Player.Instance.PlayerSO.chestEquipament);
+                ChangeClothesHelper(ref _currentHeadClothes, item, Player.Instance.PlayerSO.chestEquipament);
                 break;
             case BodyLocation.Hands:
-                ChangeClothesAux(ref _currentTorsoClothes, item, Player.Instance.PlayerSO.handsEquipament);
+                ChangeClothesHelper(ref _currentTorsoClothes, item, Player.Instance.PlayerSO.handsEquipament);
                 break;
             case BodyLocation.Legs:
-                ChangeClothesAux(ref _currentLegsClothes, item, Player.Instance.PlayerSO.legsEquipament);
+                ChangeClothesHelper(ref _currentLegsClothes, item, Player.Instance.PlayerSO.legsEquipament);
                 break;
         }
     }
 
-    private void ChangeClothesAux(ref ItemSO currentClothes, ItemSO newClothes, ItemSO baseClothes)
+    private void ChangeClothesHelper(ref ItemSO currentClothes, ItemSO newClothes, ItemSO baseClothes)
     {
-        if (currentClothes != null)
-        {
-            Player.Instance.PlayerInventory.AddItens(currentClothes);
-        }
+        if (currentClothes != null) Player.Instance.PlayerInventory.AddItens(currentClothes);
 
         currentClothes = newClothes;
         ItemChanged();

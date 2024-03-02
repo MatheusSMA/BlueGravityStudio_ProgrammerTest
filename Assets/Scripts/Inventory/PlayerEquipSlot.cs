@@ -18,22 +18,22 @@ public class PlayerEquipSlot : InventorySlotBase
         switch (item.itemBodyLocation)
         {
             case BodyLocation.Head:
-                _playerEquipUi.Player.PlayerEquipament.SwitchClothes(_playerEquipUi.Player.PlayerSO.headEquipament);
+                Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.headEquipament);
                 break;
             case BodyLocation.Chest:
-                _playerEquipUi.Player.PlayerEquipament.SwitchClothes(_playerEquipUi.Player.PlayerSO.chestEquipament);
+                Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.chestEquipament);
                 break;
             case BodyLocation.Hands:
-                _playerEquipUi.Player.PlayerEquipament.SwitchClothes(_playerEquipUi.Player.PlayerSO.handsEquipament);
+                Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.handsEquipament);
                 break;
             case BodyLocation.Legs:
-                _playerEquipUi.Player.PlayerEquipament.SwitchClothes(_playerEquipUi.Player.PlayerSO.legsEquipament);
+                Player.Instance.PlayerEquipament.SwitchClothes(Player.Instance.PlayerSO.legsEquipament);
                 break;
         }
     }
 
-    public void SetPlayerEquipUI(PlayerEquipUi peUI)
+    public void SetPlayerEquipUI(PlayerEquipUi playerEquipUI)
     {
-        _playerEquipUi = peUI;
+        _playerEquipUi = playerEquipUI;
     }
 }

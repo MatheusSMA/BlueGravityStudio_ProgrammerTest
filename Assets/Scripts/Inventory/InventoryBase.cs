@@ -18,7 +18,7 @@ public class InventoryBase : MonoBehaviour
         _maxInventorySlot = maxSlot;
         _moneyBase.SetStartMoney(initialMoney);
 
-        if (_itens != null)
+        if (itens != null)
             foreach (ItemSO item in itens)
                 AddItens(item);
     }

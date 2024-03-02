@@ -281,7 +281,7 @@ MonoBehaviour:
   _playerMovent: {fileID: 423394471749890532}
   _playerAnimation: {fileID: 5496281280816323255}
   _playerInteractable: {fileID: 5802000768333283342}
-  _playerUI: {fileID: 0}
+  _playerUI: {fileID: 8052182317000824214}
   _playerEquipament: {fileID: 0}
   _playerInventory: {fileID: 0}
   _playerSO: {fileID: 0}
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904924ce6de04446b50da4a9ae23236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rangeToCheckInteractables: 1
+  _rangeToCheckInteractables: 0.8
   _rangeOffSet: {x: 0, y: -0.5, z: 0}
   _interactableLayer:
     serializedVersion: 2

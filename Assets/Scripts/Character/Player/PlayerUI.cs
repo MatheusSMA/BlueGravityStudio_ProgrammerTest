@@ -4,6 +4,8 @@ public class PlayerUI : MonoBehaviour
 {
     [SerializeField] private Transform _interactionButtonParent;
     [SerializeField] private InteractionButtonUI _interactionButton;
+    [SerializeField] private InventoryUiPlayer _inventoryUIPlayer;
+    [SerializeField] private GameObject _inventoryUI;
 
     public void PositionInteractButton(Transform positionObject)
     {
@@ -22,4 +24,6 @@ public class PlayerUI : MonoBehaviour
         _interactionButton.gameObject.SetActive(false);
         _interactionButton.SetPosition(_interactionButtonParent);
     }
+
+    
 }

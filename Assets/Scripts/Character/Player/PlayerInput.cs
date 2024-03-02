@@ -7,7 +7,12 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        if (_canInput) GetMoveInput();
+        if (_canInput)
+        {
+            GetMoveInput();
+            CheckIfCanInteract();
+            CheckIfCanOpenIventory();
+        }
     }
     private void GetMoveInput()
     {
@@ -15,7 +20,22 @@ public class PlayerInput : MonoBehaviour
         _input.y = Input.GetAxisRaw("Vertical");
         Player.Instance.PlayerMovent.GetInput(_input);
     }
-    
+
+    private void CheckIfCanInteract()
+    {
+        if (Input.GetKeyDown(PlayerConfig.INTERACT_KEY))
+        {
+            Player.Instance.PlayerInteractable.InteractWithObject();
+        }
+    }
+    private void CheckIfCanOpenIventory()
+    {
+        if (Input.GetKeyDown(PlayerConfig.INVENTORY_KEY))
+        {
+
+        }
+    }
+
     /// <summary>
     /// Tells whether or not ir can recieve input
     /// </summary>

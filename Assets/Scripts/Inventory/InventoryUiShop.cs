@@ -27,11 +27,9 @@ public class InventoryUiShop : InventoryUIBase
 
     public bool CheckPrice(int value)
     {
-        if (_otherInventory == null)
-            return false;
+        if (_otherInventory == null) return false;
 
-        if (_otherInventory.MoneyBase.CurrentMoney < value)
-            return false;
+        if (_otherInventory.MoneyBase.CurrentMoney < value) return false;
 
         return true;
     }

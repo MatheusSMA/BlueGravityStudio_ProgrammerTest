@@ -13,7 +13,7 @@ public class InventoryBase : MonoBehaviour
     public int MaxInventorySlot { get => _maxInventorySlot; }
     public event Action OnItemChange;
 
-    private void InitializeInventory(int maxSlot, int initialMoney, List<ItemSO> itens = null)
+    public void InitializeInventory(int maxSlot, int initialMoney, List<ItemSO> itens = null)
     {
         _maxInventorySlot = maxSlot;
         _moneyBase.SetStartMoney(initialMoney);

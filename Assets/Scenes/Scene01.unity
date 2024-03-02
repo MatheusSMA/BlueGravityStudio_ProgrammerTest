@@ -10365,6 +10365,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3681699626280018780, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
+      propertyPath: _playerSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d0a717ea21938e4f9bf6e4a442c85bd, type: 2}
     - target: {fileID: 4543888260988689279, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.95386803
@@ -10555,12 +10559,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7927956149455872575, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.6179008
+      value: -2.617897
       objectReference: {fileID: 0}
     - target: {fileID: 8052182317000824214, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: _moneyBase
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7730571925987419510}
     - target: {fileID: 8052182317000824214, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: _inventoryUI
       value: 
@@ -10634,6 +10638,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2853277869000463809, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
   m_PrefabInstance: {fileID: 7730571925987419493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7730571925987419510 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1100745328740868831, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
+  m_PrefabInstance: {fileID: 7730571925987419493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944d35cdc3b355e4b9f6405722f76fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

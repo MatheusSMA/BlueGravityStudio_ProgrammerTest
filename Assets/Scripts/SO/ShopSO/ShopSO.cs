@@ -8,5 +8,5 @@ public class ShopSO : ScriptableObject
     public string ShopName = "New Shop";
     public int InitialMoney = 5;
     public int MaxSlots = 5;
-    public List<ItemSO> Items;
+    public List<ItemSO> startingItems;
 }

@@ -10,6 +10,16 @@ public class Shop : MonoBehaviour, IInteractable
     [SerializeField] private TextMeshProUGUI _shopNameTxt;
     public bool isAvailableToInteract { get; set; }
 
+    private void Start()
+    {
+        InitializeShop();
+    }
+    public void InitializeShop()
+    {
+        _shopInventory.InitializeInventory(_shopInfo.MaxSlots, _shopInfo.InitialMoney, _shopInfo.startingItems);
+        _shopUi.SetInventory(_shopInventory);
+        CheckIsAvailable();
+    }
     public void CheckIsAvailable()
     {
         if (_shopInventory.Itens.Count > 0 || _shopInventory.MoneyBase.CurrentMoney > 0)
@@ -17,13 +27,6 @@ public class Shop : MonoBehaviour, IInteractable
         else
             isAvailableToInteract = false;
     }
-
-    public void CloseShopUI()
-    {
-        _shopUiParent.SetActive(false);
-        UiManager.Instance.ShopInventoryClose();
-    }
-
     public void Interact(GameObject objectToInteract)
     {
         if (UiManager.Instance.InventoryIsOpen) return;
@@ -34,5 +37,10 @@ public class Shop : MonoBehaviour, IInteractable
         _shopUi.SetOther(_customerInventory);
         _shopUiParent.SetActive(true);
         UiManager.Instance.ShopInventoryOpen();
+    }
+    public void CloseShopUI()
+    {
+        _shopUiParent.SetActive(false);
+        UiManager.Instance.ShopInventoryClose();
     }
 }

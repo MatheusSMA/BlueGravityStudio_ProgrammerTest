@@ -8,12 +8,12 @@ public class InventoryUiShop : InventoryUIBase
 {
     [SerializeField] private bool _isShop;
     [SerializeField] private bool _isCustomer;
-
     private InventoryBase _otherInventory;
-    public bool IsShop => _isShop;
-    public bool IsCustomer => _isCustomer;
-
     public event Action OnItemSold;
+
+    public bool IsShop { get => _isShop; set => _isShop = value; }
+    public bool IsCustomer { get => _isCustomer; set => _isCustomer = value; }
+
     public void ItemWasSold()
     {
         OnItemSold?.Invoke();

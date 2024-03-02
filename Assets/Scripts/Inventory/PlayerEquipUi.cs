@@ -44,7 +44,7 @@ public class PlayerEquipUi : MonoBehaviour
         UpdateEquipSlotsAux(_player.PlayerEquipament.CurrentHeadClothes, _headSlot);
         UpdateEquipSlotsAux(_player.PlayerEquipament.CurrentTorsoClothes, _torsoSlot);
         UpdateEquipSlotsAux(_player.PlayerEquipament.CurrentLegsClothes, _legsSlot);
-    
+
     }
 
     private void UpdateEquipSlotsAux(ItemSO currentClothes, PlayerEquipSlot playerEquipSlot)

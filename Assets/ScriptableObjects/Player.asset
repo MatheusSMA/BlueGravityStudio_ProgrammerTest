@@ -16,9 +16,6 @@ MonoBehaviour:
   maxInventorySlot: 15
   startingItens:
   - {fileID: 11400000, guid: f9ffa66f9d6592f48967aeb49d14a074, type: 2}
-  - {fileID: 11400000, guid: 39f47e2bd3540fe47afeac3b00386398, type: 2}
-  - {fileID: 11400000, guid: 39f47e2bd3540fe47afeac3b00386398, type: 2}
-  - {fileID: 11400000, guid: 8091da9f6fee90a49b58b0441d14ba1d, type: 2}
   headEquipament: {fileID: 11400000, guid: 39f47e2bd3540fe47afeac3b00386398, type: 2}
   chestEquipament: {fileID: 11400000, guid: 8091da9f6fee90a49b58b0441d14ba1d, type: 2}
   handsEquipament: {fileID: 11400000, guid: f9ffa66f9d6592f48967aeb49d14a074, type: 2}

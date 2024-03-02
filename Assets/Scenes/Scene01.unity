@@ -10301,7 +10301,7 @@ PrefabInstance:
     - target: {fileID: 6097841689570120819, guid: 5fcccf334ef3d0f469b45e601a44e7c1, type: 3}
       propertyPath: _panelNameTxt
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 798617534}
     - target: {fileID: 6680475920297932776, guid: 5fcccf334ef3d0f469b45e601a44e7c1, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -10665,6 +10665,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 71
       objectReference: {fileID: 0}
+    - target: {fileID: 7235434191997468846, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
+      propertyPath: _slotPrefab
+      value: 
+      objectReference: {fileID: 1657289687631353037, guid: a30a345eab1d3fc43808dd6dbd30ff17, type: 3}
     - target: {fileID: 7391965173504171443, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: m_text
       value: aaaaaa

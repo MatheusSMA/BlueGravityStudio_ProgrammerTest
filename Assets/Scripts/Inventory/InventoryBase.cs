@@ -28,8 +28,11 @@ public class InventoryBase : MonoBehaviour
     }
     public void AddItens(ItemSO item)
     {
-        _itens.Add(item);
-        ItemChanged();
+        if (_itens.Count < MaxInventorySlot)
+        {
+            _itens.Add(item);
+            ItemChanged();
+        }
     }
     public void RemoveItens(ItemSO item)
     {

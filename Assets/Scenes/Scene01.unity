@@ -10707,7 +10707,7 @@ PrefabInstance:
     - target: {fileID: 7235434191997468846, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: _slotPrefab
       value: 
-      objectReference: {fileID: 1657289687631353037, guid: a30a345eab1d3fc43808dd6dbd30ff17, type: 3}
+      objectReference: {fileID: 9201419558422082915, guid: a30a345eab1d3fc43808dd6dbd30ff17, type: 3}
     - target: {fileID: 7288603046103691011, guid: 50b60e4779199074993c6669ec9adbf8, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068

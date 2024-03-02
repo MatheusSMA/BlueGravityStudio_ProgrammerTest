@@ -1861,8 +1861,8 @@ MonoBehaviour:
   _slotPrefab: {fileID: 5401151910837114361, guid: 76cea29f5097cff4195b3b140ed3bdb2, type: 3}
   _panelNameTxt: {fileID: 0}
   _panelName: 
-  _isShop: 0
-  _isCustomer: 1
+  _isShop: 1
+  _isCustomer: 0
 --- !u!1 &4207116626368666795
 GameObject:
   m_ObjectHideFlags: 0

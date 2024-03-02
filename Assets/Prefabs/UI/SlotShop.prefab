@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2226804284276120791, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226804284276120791, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226804284276120791, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226804284276120791, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2821096081355791094, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -35,6 +51,22 @@ PrefabInstance:
     - target: {fileID: 2821096081355791094, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431405020078259293, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 78.6092
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431405020078259293, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 26.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431405020078259293, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431405020078259293, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 16.2
       objectReference: {fileID: 0}
     - target: {fileID: 5271185612409034629, guid: 9b191dd0198e03d418086393ace676c4, type: 3}
       propertyPath: m_Pivot.x

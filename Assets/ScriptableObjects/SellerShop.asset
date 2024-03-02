@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShopName: Knight Shop
   InitialMoney: 100
-  MaxSlots: 7
+  MaxSlots: 36
   startingItems:
   - {fileID: 11400000, guid: 39f47e2bd3540fe47afeac3b00386398, type: 2}
   - {fileID: 11400000, guid: 8091da9f6fee90a49b58b0441d14ba1d, type: 2}

@@ -36,10 +36,10 @@ public class PlayerEquipament : MonoBehaviour
         switch (item.itemBodyLocation)
         {
             case BodyLocation.Head:
-                ChangeClothesHelper(ref _currentBodyClothes, item, Player.Instance.PlayerSO.headEquipament);
+                ChangeClothesHelper(ref _currentHeadClothes, item, Player.Instance.PlayerSO.headEquipament);
                 break;
             case BodyLocation.Chest:
-                ChangeClothesHelper(ref _currentHeadClothes, item, Player.Instance.PlayerSO.chestEquipament);
+                ChangeClothesHelper(ref _currentBodyClothes, item, Player.Instance.PlayerSO.chestEquipament);
                 break;
             case BodyLocation.Hands:
                 ChangeClothesHelper(ref _currentTorsoClothes, item, Player.Instance.PlayerSO.handsEquipament);

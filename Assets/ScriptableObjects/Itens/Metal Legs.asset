@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Metal Legs
   price: 1
   icon: {fileID: 21300084, guid: f5f1c19ce87450f4b97f8b363746558d, type: 3}
+  itemBodyLocation: 2

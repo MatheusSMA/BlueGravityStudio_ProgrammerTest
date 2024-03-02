@@ -66,8 +66,7 @@ public class PlayerUI : MonoBehaviour
     private void InventoryOff()
     {
         _inventoryUI.gameObject.SetActive(false);
-        _interactionButton.gameObject.SetActive(true);
-        _moneyBase.gameObject.SetActive(true);
+        // _interactionButton.gameObject.SetActive(true);
     }
     private void ShopOn()
     {
@@ -77,7 +76,7 @@ public class PlayerUI : MonoBehaviour
 
     private void ShopOff()
     {
-        _interactionButton.gameObject.SetActive(true);
+        // _interactionButton.gameObject.SetActive(true);
 
     }
 }

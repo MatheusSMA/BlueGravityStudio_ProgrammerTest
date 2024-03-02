@@ -1,5 +1,3 @@
-using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class PlayerInteractable : MonoBehaviour

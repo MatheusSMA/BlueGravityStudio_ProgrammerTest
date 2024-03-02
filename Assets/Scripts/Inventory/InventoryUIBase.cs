@@ -21,7 +21,7 @@ public class InventoryUIBase : MonoBehaviour
 
     private void Start()
     {
-        _panelNameTxt.text = _panelName;
+        // _panelNameTxt.text = _panelName;
     }
 
     public void SetInventory(InventoryBase inventory)
